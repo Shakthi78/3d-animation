@@ -620,3 +620,18 @@ function locomotive() {
       scroller:`#main`
     }
   })
+
+let tl10 = gsap.timeline({
+  scrollTrigger: {
+      trigger: "#page2",
+      scroller: `#main`,
+      start: "top center",
+      toggleActions: 'play pause resume reverse'
+  }
+});
+tl10.from('#text2 p', {
+  y: 10,
+  opacity: 0,
+  duration: .5,
+  ease: 'Expo.easeInOut'
+})
